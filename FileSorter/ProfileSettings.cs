@@ -40,9 +40,19 @@ namespace FileSorter
            
         }
 
+
         private void getCheckedExtetions()
         {
-           string checked = extectionBoxList.CheckedItems;
+            
+            foreach (String exte in extectionBoxList.SelectedItems) {
+
+                MessageBox.Show(exte);
+            }
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            getCheckedExtetions();
         }
     }
 }
