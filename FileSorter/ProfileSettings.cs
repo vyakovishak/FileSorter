@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FileSorter
 {
-    public partial class CreateUserProfile : Form
+    public partial class ProfileSettings : Form
     {
-        public CreateUserProfile()
+        public ProfileSettings()
         {
             InitializeComponent();
         }
