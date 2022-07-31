@@ -38,6 +38,8 @@
             this.buttonPathFrom = new System.Windows.Forms.Button();
             this.buttonPathTo = new System.Windows.Forms.Button();
             this.buttonTestGetUserData = new System.Windows.Forms.Button();
+            this.extectionBoxList = new System.Windows.Forms.CheckedListBox();
+            this.buttonSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lableProfile
@@ -95,7 +97,7 @@
             // 
             // buttonPathFrom
             // 
-            this.buttonPathFrom.Location = new System.Drawing.Point(227, 116);
+            this.buttonPathFrom.Location = new System.Drawing.Point(227, 165);
             this.buttonPathFrom.Name = "buttonPathFrom";
             this.buttonPathFrom.Size = new System.Drawing.Size(27, 23);
             this.buttonPathFrom.TabIndex = 7;
@@ -105,7 +107,7 @@
             // 
             // buttonPathTo
             // 
-            this.buttonPathTo.Location = new System.Drawing.Point(227, 165);
+            this.buttonPathTo.Location = new System.Drawing.Point(227, 116);
             this.buttonPathTo.Name = "buttonPathTo";
             this.buttonPathTo.Size = new System.Drawing.Size(27, 23);
             this.buttonPathTo.TabIndex = 8;
@@ -123,11 +125,35 @@
             this.buttonTestGetUserData.UseVisualStyleBackColor = true;
             this.buttonTestGetUserData.Click += new System.EventHandler(this.buttonTestGetUserData_Click);
             // 
+            // extectionBoxList
+            // 
+            this.extectionBoxList.FormattingEnabled = true;
+            this.extectionBoxList.Items.AddRange(new object[] {
+            "PDF",
+            "Word",
+            "Pictures",
+            "Code"});
+            this.extectionBoxList.Location = new System.Drawing.Point(387, 70);
+            this.extectionBoxList.Name = "extectionBoxList";
+            this.extectionBoxList.Size = new System.Drawing.Size(179, 112);
+            this.extectionBoxList.TabIndex = 10;
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Location = new System.Drawing.Point(179, 229);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(75, 23);
+            this.buttonSave.TabIndex = 11;
+            this.buttonSave.Text = "Save";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            // 
             // ProfileSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonSave);
+            this.Controls.Add(this.extectionBoxList);
             this.Controls.Add(this.buttonTestGetUserData);
             this.Controls.Add(this.buttonPathTo);
             this.Controls.Add(this.buttonPathFrom);
@@ -156,5 +182,7 @@
         private Button buttonPathFrom;
         private Button buttonPathTo;
         private Button buttonTestGetUserData;
+        private CheckedListBox extectionBoxList;
+        private Button buttonSave;
     }
 }

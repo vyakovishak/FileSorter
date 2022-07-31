@@ -19,17 +19,6 @@ namespace FileSorter
 
             fullPathFrom = fromPath.SelectedPath;
 
-            UserProfile userProfile = new UserProfile();
-
-            userProfile.PathFrom = fullPathFrom;
-
-            userProfile.PathTo = fullPathTo;
-
-            userProfile.Timestamp = (int)DateTimeOffset.Now.ToUnixTimeSeconds();
-
-            userProfile = new UserProfile();
-
-
         }
 
         private void buttonPathFrom_Click(object sender, EventArgs e)
@@ -48,10 +37,12 @@ namespace FileSorter
 
         private void buttonTestGetUserData_Click(object sender, EventArgs e)
         {
-            UserProfile userProfile = new UserProfile();
-            MessageBox.Show(userProfile.Name);
-            MessageBox.Show(userProfile.PathTo);
-            MessageBox.Show(userProfile.PathFrom);
+           
+        }
+
+        private void getCheckedExtetions()
+        {
+           string checked = extectionBoxList.CheckedItems;
         }
     }
 }

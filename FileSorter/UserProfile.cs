@@ -11,7 +11,7 @@ namespace FileSorter
         public string? Name { get; set; }
         public string? PathTo { get; set; }
         public string? PathFrom { get; set; }
-        public string? ExtantionSttings { get; set; }
+        public string? Extantions { get; set; }
         public int? Timestamp { get; set; }
 
     }
