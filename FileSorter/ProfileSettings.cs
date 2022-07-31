@@ -8,36 +8,31 @@ namespace FileSorter
             InitializeComponent();
         }
 
-
         private string fullPathFrom;
         private string fullPathTo;
 
         private void buttonPathTo_Click(object sender, EventArgs e)
         {
-            FolderBrowserDialog fromPath = getFolderPath();
-            textBoxPathFrom.Text = fromPath.RootFolder.ToString();
-
-            fullPathFrom = fromPath.SelectedPath;
-
+            fullPathTo = setPathToUserChoice(textBoxPathTo);
+            
         }
 
         private void buttonPathFrom_Click(object sender, EventArgs e)
         {
-            FolderBrowserDialog fromPath = getFolderPath();
-            textBoxPathTo.Text = fromPath.RootFolder.ToString();
-
-            fullPathTo = fromPath.SelectedPath;
+            fullPathFrom = setPathToUserChoice(textBoxPathFrom);
         }
 
-        private FolderBrowserDialog getFolderPath()
+        private String setPathToUserChoice(TextBox textbox)
         {
             dialogFolderPath.ShowDialog();
-            return dialogFolderPath;
-        }
+            String selectedPath = dialogFolderPath.SelectedPath;
 
-        private void buttonTestGetUserData_Click(object sender, EventArgs e)
-        {
-           
+            if (!String.IsNullOrEmpty(selectedPath))
+            {
+                textbox.Text = new DirectoryInfo(dialogFolderPath.SelectedPath).Name;
+            }
+            
+            return dialogFolderPath.SelectedPath;
         }
 
 

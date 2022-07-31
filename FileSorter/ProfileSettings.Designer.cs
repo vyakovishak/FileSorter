@@ -97,7 +97,7 @@
             // 
             // buttonPathFrom
             // 
-            this.buttonPathFrom.Location = new System.Drawing.Point(227, 165);
+            this.buttonPathFrom.Location = new System.Drawing.Point(227, 115);
             this.buttonPathFrom.Name = "buttonPathFrom";
             this.buttonPathFrom.Size = new System.Drawing.Size(27, 23);
             this.buttonPathFrom.TabIndex = 7;
@@ -107,7 +107,7 @@
             // 
             // buttonPathTo
             // 
-            this.buttonPathTo.Location = new System.Drawing.Point(227, 116);
+            this.buttonPathTo.Location = new System.Drawing.Point(227, 165);
             this.buttonPathTo.Name = "buttonPathTo";
             this.buttonPathTo.Size = new System.Drawing.Size(27, 23);
             this.buttonPathTo.TabIndex = 8;
@@ -123,7 +123,6 @@
             this.buttonTestGetUserData.TabIndex = 9;
             this.buttonTestGetUserData.Text = "button1";
             this.buttonTestGetUserData.UseVisualStyleBackColor = true;
-            this.buttonTestGetUserData.Click += new System.EventHandler(this.buttonTestGetUserData_Click);
             // 
             // extectionBoxList
             // 
